@@ -20,35 +20,3 @@
     <script src="questao04.js"></script>
 </body>
 </html>
-questao04.js
-function validarFormulario() {
-    const nome = document.getElementById('nome').value.trim();
-    const cpf = document.getElementById('cpf').value.trim();
-    const mensagem = document.getElementById('mensagem');
-
-    // Regex para validar o formato do CPF
-    const cpfValido = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
-
-    if (nome === '' || cpf === '') {
-        mensagem.style.color = 'red';
-        mensagem.innerText = 'Os campos Nome e CPF são obrigatórios.';
-    } else if (!cpfValido.test(cpf)) {
-        mensagem.style.color = 'red';
-        mensagem.innerText = 'CPF inválido! Use o formato 000.000.000-00.';
-    } else {
-        mensagem.style.color = 'green';
-        mensagem.innerText = 'Cadastro validado com sucesso!';
-    }
-}
-Como funciona:
-O formulário possui os campos conforme solicitado.
-O botão chama a função validarFormulario().
-A função verifica se os campos "Nome" e "CPF" estão preenchidos.
-Se algum estiver vazio, exibe mensagem de erro em vermelho.
-Se o CPF não estiver no formato correto, exibe outra mensagem de erro.
-Caso tudo esteja correto, exibe mensagem de sucesso em verde.
-Se quiser, posso ajudar a implementar validações mais avançadas, mas isso atende o que foi pedido. Quer que eu explique algum trecho?
-
-Copy
-Like
-Unlike
